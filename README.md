@@ -9,7 +9,7 @@ A repeipt\invoice generator for where you're not supposed to generate one
 
 1. Clone the repo
 ```
-git clone https://github.com/lap-does-things/VoicesInMyHead
+git clone https://github.com/lap-does-things/Unproductive-Invoice
 ```
 
 2. Install the dependencies
