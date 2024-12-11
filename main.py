@@ -23,8 +23,8 @@ def menu(pdf,title,table,titleStyle):
         print('\t'.join(map(str, k)))
         print()
     print("0. Build the invoice")
-    print("1. Add a new row")
-    print("2. Add a new column")
+    print("1. Add a new column")
+    print("2. Add a new row")
     print("3. Delete a row TODO")
     print("4. Delete a column TODO")
     print("5. Change the invoice title") 
@@ -38,6 +38,10 @@ def menu(pdf,title,table,titleStyle):
         add_row(pdf,title,table)
     elif choice == "2":
         add_column(pdf,title,table)
+    elif choice == "3":
+        delete_row(pdf,title,table)
+    elif choice == "4":
+        delete_column(pdf,title,table)
     elif choice == "6":
         exit()
     elif choice == "5":
@@ -65,12 +69,16 @@ def add_column(pdf,title,table):
 
 def delete_row(pdf,title,table):
     global DATA
-    DATA.pop() ## FIXME breaks everything
+    #DATA.pop() ## FIXME breaks everything
+    DATA.pop(int(input("Enter the row number to delete (from 1): ")))
     menu(pdf,title,table,titleStyle)
 
 def delete_column(pdf,title,table):
     global DATA
-    DATA.pop() ## FIXME same as above
+    #DATA.pop() ## FIXME same as above
+    a = int(input("Enter the column number to delete (from 1): "))
+    for i in range(len(DATA)):
+        DATA[i].pop(a-1)
     menu(pdf,title,table,titleStyle)
 
 
