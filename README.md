@@ -23,3 +23,8 @@ pip install -r requirements.txt
 python main.py
 ```
 
+## Ways to contribute
+Here's a list of current TODOs for the project, if someone would decide to contribute:
+- TODO : implement editing a specified cell
+- TODO : make preview table printing prettier
+- TODO : add an option to change the style of the table (would need to consult with reportlab docs)
