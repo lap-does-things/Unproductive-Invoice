@@ -20,7 +20,7 @@ def refreshtable(DATA):
 def menu(pdf,title,table,titleStyle):
     for k in DATA:
         print()
-        print('\t'.join(map(str, k)))
+        print('\t'.join(map(str, k))) # TODO: make this prettier
         print()
     print("0. Build the invoice")
     print("1. Add a new column")
@@ -69,13 +69,13 @@ def add_column(pdf,title,table):
 
 def delete_row(pdf,title,table):
     global DATA
-    #DATA.pop() ## FIXME breaks everything
+    #DATA.pop() ## FIXME breaks everything ## FIXEDYOU
     DATA.pop(int(input("Enter the row number to delete (from 1): ")))
     menu(pdf,title,table,titleStyle)
 
 def delete_column(pdf,title,table):
     global DATA
-    #DATA.pop() ## FIXME same as above
+    #DATA.pop() ## FIXME same as above ## FIXEDYOU
     a = int(input("Enter the column number to delete (from 1): "))
     for i in range(len(DATA)):
         DATA[i].pop(a-1)
