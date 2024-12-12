@@ -5,7 +5,7 @@ from reportlab.lib.pagesizes import A4
 global noactions 
 noactions = True
 DATA = [["*"]]
-
+# TODO : implement editing a specified cell
 def refreshtable(DATA):
     return Table(DATA, style=TableStyle( 
     [ 
@@ -30,6 +30,7 @@ def menu(pdf,title,table,titleStyle):
     print("5. Change the invoice title") 
     print("6. Exit")
     choice = input("Enter your choice: ")
+    # TODO : add an option to change the style of the table
     if choice == "0":
         table = refreshtable(DATA)
         pdf.build([title, table])
